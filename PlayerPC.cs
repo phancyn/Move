@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPC : MonoBehaviour
 {
@@ -67,12 +66,9 @@ public class PlayerPC : MonoBehaviour
         {
             anim.SetBool("run", true);
         }
+         rb.MovePosition(rb.position + contMove * Time.deltaTime);
     }
 
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + contMove * Time.deltaTime);
-    }
 
     public void Move(string moving)
     {
