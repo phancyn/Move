@@ -67,12 +67,10 @@ public class PlayerPC : MonoBehaviour
         {
             anim.SetBool("run", true);
         }
+        
+         rb.MovePosition(rb.position + contMove * Time.deltaTime);
     }
 
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + contMove * Time.deltaTime);
-    }
 
     public void Move(string moving)
     {
